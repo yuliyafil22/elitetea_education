@@ -26,6 +26,8 @@ test.describe('Google homepage', () => {
       } catch {
         // ignore
       }
+    await expect(page).toHaveTitle(/Google/i);
+
     }
 
     const googleLogo = page.getByRole('img', { name: /Google/i }).first();
